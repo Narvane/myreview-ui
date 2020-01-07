@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/dist/<myreview-ui>'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/<myreview-ui>/index.html'));
+res.sendFile(path.join(__dirname+'/dist/<myreview-ui>/'));
 });
 
 // Start the app by listening on the default Heroku port
