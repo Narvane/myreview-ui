@@ -1,0 +1,14 @@
+<app-address  (establishmentEmiter)="reciverList($event)"></app-address>
+<div class="list-group" *ngFor="let establishment of establishments">
+    <a routerLink="/establishments/{{ establishment.id }}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{ establishment.name }}</h5>
+                    <small></small>
+            </div>
+            <p class="mb-1">{{ establishment.description }}</p>
+            <small>
+                    <star-rating value="{{ establishment.stars }}" totalstars="5" checkedcolor="orange" uncheckedcolor="black" size="24px" readonly="true"></star-rating>
+            </small>
+    </a>
+     
+</div>
