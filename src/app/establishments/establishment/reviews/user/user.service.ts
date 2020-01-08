@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  private apiurl = 'http://localhost:8080/';
+  private apiurl = 'https://myreview-api.herokuapp.com/';
   public USER_URL = `${this.apiurl}/user/`;
   public SAVE_UPDATE_USER_URL = `${this.apiurl}/users`;
   public AUTHENTICATE_USER_URL = `${this.apiurl}/login`;

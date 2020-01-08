@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ReviewService {
 
-  private apiurl = 'http://localhost:8080/';
+  private apiurl = 'https://myreview-api.herokuapp.com/';
   public REVIEWS_BY_ESTABLISHMENT_URL = `${this.apiurl}/reviews/establishment/`;
   public REVIEWS_BY_USER_URL = `${this.apiurl}/reviews/user/`;
   public SAVE_REVIEW = `${this.apiurl}/reviews`;

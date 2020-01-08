@@ -8,7 +8,7 @@ import {Observable} from "rxjs";
 })
 export class EstablishmentService {
 
-  private apiurl = 'http://localhost:8080/';
+  private apiurl = 'https://myreview-api.herokuapp.com/';
   public ALL_ESTABLISHMENTS_URL = `${this.apiurl}/establishments/all`;
   public ESTABLISHMENTS_BY_STATE_URL = `${this.apiurl}/establishments/state/`;
   public ESTABLISHMENTS_BY_CITY_URL = `${this.apiurl}/establishments/city/`;

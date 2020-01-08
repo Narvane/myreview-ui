@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AddressService {
 
-  private apiurl = 'http://localhost:8080/';
+  private apiurl = 'https://myreview-api.herokuapp.com/';
   public ALL_STATES = `${this.apiurl}/states`;
   public CITIES_BY_STATE = `${this.apiurl}/cities/`;
   public DISTRICTS_BY_CITY = `${this.apiurl}/districts/`;
