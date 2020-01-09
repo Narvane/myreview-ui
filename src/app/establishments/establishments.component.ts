@@ -1,3 +1,4 @@
+import { User } from './../user';
 import { Observable } from 'rxjs';
 import { EstablishmentService } from './establishment.service';
 import { Component, OnInit } from '@angular/core';
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./establishments.component.css']
 })
 export class EstablishmentsComponent implements OnInit {
-
+  public user: User;
   establishments = [];
 
   constructor(private establishmentService: EstablishmentService) { }

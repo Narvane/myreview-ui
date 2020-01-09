@@ -1,7 +1,7 @@
 import { User } from './../user';
 import { Router } from '@angular/router';
 import { UserService } from './../establishments/establishment/reviews/user/user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-navbar-component',
@@ -9,27 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar-component.component.css']
 })
 export class NavbarComponentComponent implements OnInit {
-  user: User;
-  email;
-  password;
-  logged;
+  
+  @Output() userEmiter = new EventEmitter<any>();
+
+  public user: User;
+  public email;
+  public password;
+  public logged = false;
 
   router: Router;
 
   constructor(private userService: UserService, router: Router) { }
 
   ngOnInit() {
-    //this.user.id = "1";
-/*     this.user.firstName = "Gustavo";
-    this.user.lastName = "Alves";
-    this.user.email = "gustavoalvesandrade18@gmail.com ";
-    this.user.password = "123";
- */
     this.logged = true;
   }
 
-  login(){
-      
+  loggedReviver(isLogged: boolean){
+    this.logged = isLogged;
   }
 
 

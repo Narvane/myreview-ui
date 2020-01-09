@@ -18,6 +18,7 @@ import { UserComponent } from './establishments/establishment/reviews/user/user.
 import { ProfileComponent } from './establishments/establishment/reviews/user/profile/profile.component';
 import { ReviewsComponent } from './establishments/establishment/reviews/reviews.component';
 import { ToastComponent } from './toast/toast.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ToastComponent } from './toast/toast.component';
     ProfileComponent,
     ReviewsComponent,
     ToastComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

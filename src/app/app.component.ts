@@ -10,5 +10,9 @@ import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  user;
+    public user: User;
+
+  userReciver(user: User){
+    this.user = user;
+  }
 }

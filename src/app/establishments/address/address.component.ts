@@ -15,7 +15,7 @@ export class AddressComponent implements OnInit {
   @Output() establishmentEmiter = new EventEmitter<any>();
   establishmentList: Observable<any>;
 
-  selectedState = "Estados";
+  selectedState = "Estados"; 
   selectedCity = "Cidades";
   selectedDistrict = "Bairros";
 
