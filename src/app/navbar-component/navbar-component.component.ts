@@ -25,7 +25,7 @@ export class NavbarComponentComponent implements OnInit {
     this.logged = true;
   }
 
-  loggedReviver(isLogged: boolean){
+  loggedReciver(isLogged: boolean){
     this.logged = isLogged;
   }
 
