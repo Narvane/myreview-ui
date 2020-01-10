@@ -1,14 +1,14 @@
-import { User } from './../../../../user';
+import { UserService } from './../../service/user.service';
+import { User } from '../../models/user';
 import { Router } from '@angular/router';
-import { UserService } from './user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-user-item',
+  templateUrl: './user-item.component.html',
+  styleUrls: ['./user-item.component.css']
 })
-export class UserComponent implements OnInit {
+export class UserItemComponent implements OnInit {
   public user: User;
   constructor(private userService: UserService, router: Router) { }
 

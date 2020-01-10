@@ -1,14 +1,15 @@
-import { User } from './../user';
+import { EstablishmentService } from './../../service/establishment.service';
+import { User } from '../../models/user';
+
 import { Observable } from 'rxjs';
-import { EstablishmentService } from './establishment.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-establishments',
-  templateUrl: './establishments.component.html',
-  styleUrls: ['./establishments.component.css']
+  selector: 'app-establishment-list-item',
+  templateUrl: './establishment-list-item.component.html',
+  styleUrls: ['./establishment-list-item.component.css']
 })
-export class EstablishmentsComponent implements OnInit {
+export class EstablishmentListItemComponent implements OnInit {
   public user: User;
   establishments = [];
 

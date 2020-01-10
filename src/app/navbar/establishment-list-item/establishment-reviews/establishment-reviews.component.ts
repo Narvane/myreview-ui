@@ -1,16 +1,17 @@
+import { UserService } from './../../../service/user.service';
+import { ReviewService } from './../../../service/review.service';
+import { EstablishmentService } from './../../../service/establishment.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { UserService } from './reviews/user/user.service';
-import { ReviewService } from '../../review.service';
-import { EstablishmentService } from '../establishment.service';
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-establishment',
-  templateUrl: './establishment.component.html',
-  styleUrls: ['./establishment.component.css']
+  selector: 'app-establishment-reviews',
+  templateUrl: './establishment-reviews.component.html',
+  styleUrls: ['./establishment-reviews.component.css']
 })
-export class EstablishmentComponent implements OnInit {
+export class EstablishmentReviewsComponent implements OnInit {
   public establishmentId;
   establishment;
   reviews = [];

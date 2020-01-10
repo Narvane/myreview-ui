@@ -1,14 +1,15 @@
+import { UserService } from './../../../service/user.service';
+import { User } from '../../../models/user';
 import { Router } from '@angular/router';
-import { UserService } from './user/user.service';
-import { User } from './../../../user';
+
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-reviews',
-  templateUrl: './reviews.component.html',
-  styleUrls: ['./reviews.component.css']
+  selector: 'app-user-reviews',
+  templateUrl: './user-reviews.component.html',
+  styleUrls: ['./user-reviews.component.css']
 })
-export class ReviewsComponent implements OnInit {
+export class UserReviewsComponent implements OnInit {
   public user: User;
   constructor(private userService: UserService, router: Router) { }
 

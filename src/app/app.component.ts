@@ -1,4 +1,4 @@
-import { User } from './user';
+import { User } from './models/user';
 import { Component } from '@angular/core';
 import {Observable} from 'rxjs';
 import {debounceTime, distinctUntilChanged, map} from 'rxjs/operators'

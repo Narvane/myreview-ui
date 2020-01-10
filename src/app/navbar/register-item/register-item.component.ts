@@ -1,17 +1,17 @@
-import { UserService } from '../establishments/establishment/reviews/user/user.service';
-import { User } from '../user';
-import { ToastService } from '../toast/toast.service';
+import { UserService } from '../../service/user.service';
+import { User } from '../../models/user';
+import { ToastService } from '../../service/toast.service';
 import { Component, OnInit } from '@angular/core';
-import { EstablishmentService } from '../establishments/establishment.service';
+import { EstablishmentService } from '../../service/establishment.service';
 import { stringify } from 'querystring';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-register-item',
+  templateUrl: './register-item.component.html',
+  styleUrls: ['./register-item.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterItemComponent implements OnInit {
 
   constructor(private toastService: ToastService, router: Router, private userService: UserService) { 
     this.router = router;

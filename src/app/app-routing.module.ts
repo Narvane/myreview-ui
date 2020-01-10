@@ -1,39 +1,42 @@
-import { ReviewsComponent } from './establishments/establishment/reviews/reviews.component';
-import { ProfileComponent } from './establishments/establishment/reviews/user/profile/profile.component';
-import { EstablishmentsComponent } from './establishments/establishments.component';
-import { AddressService } from './address.service';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { EstablishmentComponent } from './establishments/establishment/establishment.component';
+import { UserProfileComponent } from './navbar/user-item/user-profile/user-profile.component';
+import { UserReviewsComponent } from './navbar/user-item/user-reviews/user-reviews.component';
+
+import { RegisterItemComponent } from './navbar/register-item/register-item.component';
+import { EstablishmentReviewsComponent } from './navbar/establishment-list-item/establishment-reviews/establishment-reviews.component';
+import { HomeItemComponent } from './navbar/home-item/home-item.component';
+import { EstablishmentListItemComponent } from './navbar/establishment-list-item/establishment-list-item.component';
+
+
+import { AddressService } from './service/address.service';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AddressComponent } from './establishments/address/address.component';
+
 
 
 const routes: Routes = [
   {
     path:'',
-    component: HomeComponent
+    component: HomeItemComponent
   },
   {
     path:'establishments',
-    component: EstablishmentsComponent
+    component: EstablishmentListItemComponent
   },
   {
     path:'establishments/:id',
-    component: EstablishmentComponent
+    component: EstablishmentReviewsComponent
   },
   {
     path:'user/register',
-    component: RegisterComponent
+    component: RegisterItemComponent
   },
   {
     path:'user/profile',
-    component: ProfileComponent
+    component: UserProfileComponent
   },
   {
     path:'user/reviews',
-    component: ReviewsComponent
+    component: UserReviewsComponent
   }
 ];
 

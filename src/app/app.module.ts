@@ -1,40 +1,40 @@
+import { UserReviewsComponent } from './navbar/user-item/user-reviews/user-reviews.component';
+import { UserProfileComponent } from './navbar/user-item/user-profile/user-profile.component';
+import { LoginItemComponent } from './navbar/login-item/login-item.component';
+
+import { UserItemComponent } from './navbar/user-item/user-item.component';
+import { EstablishmentReviewsComponent } from './navbar/establishment-list-item/establishment-reviews/establishment-reviews.component';
+import { HomeItemComponent } from './navbar/home-item/home-item.component';
+import { AddressComponent } from './navbar/establishment-list-item/address/address.component';
+import { RegisterItemComponent } from './navbar/register-item/register-item.component';
+import { EstablishmentListItemComponent } from './navbar/establishment-list-item/establishment-list-item.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponentComponent } from './navbar-component/navbar-component.component';
 import { HttpClientModule } from "@angular/common/http";
-import { EstablishmentComponent } from './establishments/establishment/establishment.component';
-import { Routes, RouterModule } from '@angular/router';
-import { RegisterComponent } from './register/register.component';
-import { AddressComponent } from './establishments/address/address.component';
-import { HomeComponent } from './home/home.component';
-import { EstablishmentsComponent } from './establishments/establishments.component';
 import { RatingModule } from 'ng-starrating';
-import { UserComponent } from './establishments/establishment/reviews/user/user.component';
-import { ProfileComponent } from './establishments/establishment/reviews/user/profile/profile.component';
-import { ReviewsComponent } from './establishments/establishment/reviews/reviews.component';
 import { ToastComponent } from './toast/toast.component';
-import { LoginComponent } from './login/login.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponentComponent,
-    EstablishmentComponent,
-    RegisterComponent,
+    NavbarComponent,
+    EstablishmentListItemComponent,
+    RegisterItemComponent,
     AddressComponent,
-    HomeComponent,
-    EstablishmentsComponent,
-    UserComponent,
-    ProfileComponent,
-    ReviewsComponent,
+    HomeItemComponent,
+    EstablishmentReviewsComponent,
+    UserItemComponent,
+    UserProfileComponent,
+    UserReviewsComponent,
     ToastComponent,
-    LoginComponent,
+    LoginItemComponent,
   ],
   imports: [
     BrowserModule,

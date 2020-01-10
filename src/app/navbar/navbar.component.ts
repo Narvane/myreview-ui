@@ -1,14 +1,14 @@
-import { User } from './../user';
+import { User } from '../models/user';
 import { Router } from '@angular/router';
-import { UserService } from './../establishments/establishment/reviews/user/user.service';
+import { UserService } from '../service/user.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar-component',
-  templateUrl: './navbar-component.component.html',
-  styleUrls: ['./navbar-component.component.css']
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponentComponent implements OnInit {
+export class NavbarComponent implements OnInit {
   
   @Output() userEmiter = new EventEmitter<any>();
 
