@@ -11,7 +11,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class LoginComponent implements OnInit {
   @Output() isLooggedEmit = new EventEmitter<any>();
 
-  public user: User;
+  public email;
+  public password;
   public feedback: string;
 
   @Output() userEmiter = new EventEmitter<any>();
@@ -22,9 +23,9 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    if(!this.userService.login(this.user.email, this.user.password)){
-      this.user.email = "";
-      this.user.password = "";
+    if(!this.userService.login(this.email, this.password)){
+      this.email = "";
+      this.password = "";
     }else{
       this.isLooggedEmit.emit(true);
     }
