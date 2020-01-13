@@ -30,9 +30,9 @@
         </li>
       </div>
       <ng-template #elseBlock>
-        <li class="nav-item active" ngbDropdown display="dynamic" placement="bottom-right">
-          <app-login-item (isLooggedEmit)="loggedReciver($event)"></app-login-item>
-        </li>
+        
+        <app-login-item (isLooggedEmit)="loggedReciver($event)"></app-login-item>
+      
       </ng-template>
     </ul>
   </div>

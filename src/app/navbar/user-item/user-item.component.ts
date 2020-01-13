@@ -13,11 +13,7 @@ export class UserItemComponent implements OnInit {
   constructor(private userService: UserService, router: Router) { }
 
   ngOnInit() {
-    this.userService.getUserObs().subscribe(res => { 
-      this.user = <any> res;
-    }, error => {
-      alert(error)
-    });
+ 
   }
 
 }

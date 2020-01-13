@@ -27,7 +27,9 @@ export class AddressComponent implements OnInit {
   constructor(private addressService: AddressService, private establishmentService: EstablishmentService) { }
 
   ngOnInit() {
-    this.loadStates();
+    this.selectedState = "Estados";
+    this.addressService.getStates()
+      .subscribe(response => this.states = <any>response);
   }
 
   loadStates() {
@@ -36,14 +38,14 @@ export class AddressComponent implements OnInit {
       .subscribe(response => this.states = <any>response);
 
     this.selectedCity = "Cidades";
-    this.loadCities();
+    //this.loadCities();
   }
   loadCities() {
     this.addressService.getCitiesByState(this.selectedState)
       .subscribe(response => this.cities = <any>response);
 
     this.selectedDistrict = "Bairros";
-    this.loadDistricts();
+    //this.loadDistricts();
   }
   loadDistricts() {
     this.addressService.getDistrictsByCity(this.selectedCity)

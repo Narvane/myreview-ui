@@ -17,17 +17,12 @@ export class LoginItemComponent implements OnInit {
 
   @Output() userEmiter = new EventEmitter<any>();
   
-  constructor(private userService: UserService, router: Router) { }
+  constructor(private userService: UserService, router: Router) { 
+
+  }
 
   ngOnInit() {
   }
 
-  login(){
-    if(!this.userService.login(this.email, this.password)){
-      this.email = "";
-      this.password = "";
-    }else{
-      this.isLooggedEmit.emit(true);
-    }
-  }
+
 }
