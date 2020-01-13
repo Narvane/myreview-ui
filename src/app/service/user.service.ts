@@ -10,7 +10,7 @@ import { TestBed } from '@angular/core/testing';
 export class UserService {
 
   private apiurl = 'https://myreview-api.herokuapp.com';
-  public USER_URL = `${this.apiurl}/user/`;
+  public USER_URL = `${this.apiurl}/users/user/`;
   public SAVE_UPDATE_USER_URL = `${this.apiurl}/users`;
   public AUTHENTICATE_USER_URL = `${this.apiurl}/login`;
 
