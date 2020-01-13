@@ -10,7 +10,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class LoginItemComponent implements OnInit {
   @Output() isLooggedEmit = new EventEmitter<any>();
-
+  variable;
   public email;
   public password;
   public feedback: string;
@@ -25,9 +25,8 @@ export class LoginItemComponent implements OnInit {
   }
 
   login(){
-    let variable;
-    this.userService.getUser('1').subscribe(res => variable = <any> res);
-    alert(variable)
+    this.userService.getUser('1').subscribe(res => this.variable = <any> res);
+    alert(this.variable)
   }
 
 }
