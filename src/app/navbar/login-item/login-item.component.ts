@@ -24,9 +24,9 @@ export class LoginItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  login(){
+/*   login(){
     this.userService.getUser('1').subscribe(res => this.variable = <any> res);
     alert(this.variable)
-  }
+  } */
 
 }

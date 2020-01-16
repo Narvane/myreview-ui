@@ -27,20 +27,6 @@
     <small style="color: grey;">{{ review.user.firstName }}</small>
   </li>
 </ul>
-
 <ng-template #content let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title">Avalie o Estabelecimento</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <star-rating value="5" totalstars="5" checkedcolor="orange" uncheckedcolor="black" [(ngModel)]="stars" size="24px"
-      readonly="false"></star-rating>
-    <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="comment" rows="3"></textarea>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-warning" (click)="postReview()">Avaliar</button>
-  </div>
+<app-review></app-review>
 </ng-template>

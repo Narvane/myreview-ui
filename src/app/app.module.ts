@@ -11,13 +11,15 @@ import { EstablishmentListItemComponent } from './navbar/establishment-list-item
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { RatingModule } from 'ng-starrating';
 import { ToastComponent } from './toast/toast.component';
+import { ReviewComponent } from './navbar/establishment-list-item/establishment-reviews/review/review.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -35,6 +37,7 @@ import { ToastComponent } from './toast/toast.component';
     UserReviewsComponent,
     ToastComponent,
     LoginItemComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { ToastComponent } from './toast/toast.component';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    RatingModule 
+    RatingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
