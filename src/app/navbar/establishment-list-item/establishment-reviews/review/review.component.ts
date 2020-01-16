@@ -1,3 +1,4 @@
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 //import { Review } from './../../../../models/review';
 import { ReviewService } from './../../../../service/review.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,7 +12,7 @@ import { FormBuilder, ReactiveFormsModule  } from '@angular/forms';
 })
 export class ReviewComponent implements OnInit {
   public reviewForm;
-  constructor(private formBuilder: FormBuilder, private reviewService: ReviewService) { 
+  constructor(private formBuilder: FormBuilder, private reviewService: ReviewService, private modalService: NgbModal) { 
     this.reviewForm = this.formBuilder.group({
       stars: '',
       comment: ''
