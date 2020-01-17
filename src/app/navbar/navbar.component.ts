@@ -15,14 +15,13 @@ export class NavbarComponent implements OnInit {
   public user: User;
   public email;
   public password;
-  public logged = false;
+  public logged: boolean = false;
 
   router: Router;
 
   constructor(private userService: UserService, router: Router) { }
 
   ngOnInit() {
-    this.logged = true;
   }
 
   loggedReciver(isLogged: boolean){

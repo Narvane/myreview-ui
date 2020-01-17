@@ -37,7 +37,7 @@ export class RegisterItemComponent implements OnInit {
   passwordInvalidFeedback: string = "Algo errado!";
   passwordConfirmInvalidFeedback: string = "Algo errado!";
 
-  ngOnInit() {
+  ngOnInit() { 
   }
 
   firstNameValidate(){
@@ -146,7 +146,7 @@ export class RegisterItemComponent implements OnInit {
     user.email = this.email;
     user.password = this.password;
     alert(user.firstName+ user.lastName+ user.email+ user.password)
-    this.userService.postUser(user);
+    this.userService.registerUser(user);
   }
 
   hasNumber(name: string){

@@ -15,7 +15,7 @@
       </li>
     </ul>
     <ul class="nav navbar-nav ml-auto" style="float: right;">
-      <div *ngIf="false; else elseBlock">
+      <div *ngIf="logged; else elseBlock">
         <li class="nav-item active" ngbDropdown display="dynamic" placement="bottom-right">
           <a class="nav-link" style="cursor: pointer" ngbDropdownToggle id="navbarDropdown3" role="button">
             <img src="https://cdn.iconscout.com/icon/free/png-256/avatar-370-456322.png" width="30" height="30"
@@ -30,9 +30,7 @@
         </li>
       </div>
       <ng-template #elseBlock>
-        
         <app-login-item (isLooggedEmit)="loggedReciver($event)"></app-login-item>
-      
       </ng-template>
     </ul>
   </div>

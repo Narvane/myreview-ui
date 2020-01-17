@@ -1,30 +1,28 @@
-import { User } from '../models/user';
 import { Observable } from 'rxjs';
+import { User } from '../models/user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { TestBed } from '@angular/core/testing';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
+  public globalUser: Observable<any>;
+  private apiurl = 'https://myreview-api.herokuapp.com/users/';
 
-  private apiurl = 'https://myreview-api.herokuapp.com';
-  public USER_URL = `${this.apiurl}/users/user/`;
-  public SAVE_UPDATE_USER_URL = `${this.apiurl}/users`;
-  public AUTHENTICATE_USER_URL = `${this.apiurl}/login`;
+  public SAVE_UPDATE_USER_URL = `${this.apiurl}`;
+  public AUTHENTICATE_USER_URL = `${this.apiurl}login`;
 
-  constructor(private httpCliente: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-   postUser(user: any){
-    this.httpCliente.post<any>(this.SAVE_UPDATE_USER_URL, user).subscribe(res => { 
-      console.log(`this.brandListService`, {res}); 
-    }, error => {
-      console.log("Error", error);
-    });;
+  registerUser(user: User){
+    return this.httpClient.post<User>(this.SAVE_UPDATE_USER_URL, user);
   }
- 
-  getUser(idUser: string){
-    return this.httpCliente.get(this.USER_URL + idUser);
+
+  login(user: User){
+    alert(user.email+user.password)
+    this.globalUser = this.httpClient.post<User>(this.AUTHENTICATE_USER_URL, user);
   }
+
 }
